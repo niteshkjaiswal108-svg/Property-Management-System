@@ -14,6 +14,7 @@ import {
   findTicketsByTenantId,
   findUnitByPropertyAndNumber,
   findUnitById,
+  findTicketsByTechnicianId,
 } from "./ticket.repositories.ts";
 import type { ListTicketsFilters } from "./ticket.repositories.ts";
 
@@ -279,4 +280,10 @@ export const updateTicketService = async (
     { updates }
   );
   return updated;
+};
+
+export const getAssignedTicketsService = async (technicianId: string) => {
+  const tickets = await findTicketsByTechnicianId(technicianId);
+  logger.info(`Fetched ${tickets.length} assigned tickets for technicianId=${technicianId}`);
+  return tickets;
 };
