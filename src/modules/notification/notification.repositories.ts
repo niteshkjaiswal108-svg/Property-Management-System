@@ -10,3 +10,13 @@ export const findNotificationsByUserId = async (userId: string) => {
     .orderBy(desc(notifications.createdAt));
   return rows;
 };
+
+// "Find one notification by id" – so we can check it exists and belongs to the user
+export const findNotificationById = async (id: string) => {
+    const [row] = await db
+      .select()
+      .from(notifications)
+      .where(eq(notifications.id, id))
+      .limit(1);
+    return row ?? null;
+  };
