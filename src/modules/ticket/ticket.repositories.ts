@@ -175,3 +175,11 @@ export const updateTicket = async (ticketId: string, data: UpdateTicketInput) =>
     .returning();
   return updated ?? null;
 };
+
+export const findTicketsByTechnicianId = async (technicianId: string) => {
+  return db
+    .select()
+    .from(tickets)
+    .where(eq(tickets.technicianId, technicianId))
+    .orderBy(desc(tickets.createdAt));
+};
