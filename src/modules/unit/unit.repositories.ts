@@ -19,3 +19,17 @@ export const createUnit = async (data: CreateUnitRepoInput) => {
     .returning();
   return unit ?? null;
 };
+
+export const findUnitByPropertyAndNumber = async (
+    propertyId: string,
+    unitNumber: string
+  ) => {
+    const [unit] = await db
+      .select()
+      .from(units)
+      .where(
+        and(eq(units.propertyId, propertyId), eq(units.unitNumber, unitNumber))
+      )
+      .limit(1);
+    return unit ?? null;
+  };
