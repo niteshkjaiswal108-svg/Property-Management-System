@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { isAuthenticated, authorizeRoles } from "../user/user.middlewares.ts";
+import { createUnitController } from "../unit/unit.controller.ts";
 import {
   createPropertyController,
   getPropertiesController,
@@ -39,6 +40,14 @@ propertyRouter.post(
   isAuthenticated,
   authorizeRoles("ADMIN"),
   assignManagerController
+);
+
+// POST /api/v1/properties/:id/units
+propertyRouter.post(
+  "/:id/units",
+  isAuthenticated,
+  authorizeRoles("ADMIN", "MANAGER"),
+  createUnitController
 );
 
 export default propertyRouter;
