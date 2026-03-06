@@ -10,6 +10,8 @@ import {
   getTicketByIdController,
   assignTicketController,
   updateTicketController,
+  updateTicketProgressController,
+  getAssignedTicketsController,
 } from "./ticket.controllers.ts";
 import { uploadTicketImages } from "#utils/upload.ts";
 
@@ -56,5 +58,17 @@ ticketRouter.patch(
   authorizeRoles("MANAGER"),
   updateTicketController
 );
+
+ticketRouter.get(
+  "/assigned", 
+  isAuthenticated, 
+  authorizeRoles("TECHNICIAN"), 
+  getAssignedTicketsController);
+
+ticketRouter.patch(
+  "/:id/progress", 
+  isAuthenticated, 
+  authorizeRoles("TECHNICIAN"), 
+  updateTicketProgressController);
 
 export default ticketRouter;
