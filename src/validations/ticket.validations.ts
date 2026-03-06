@@ -32,6 +32,11 @@ export const ticketUpdateSchema = z.object({
   { message: "At least one of priority or status must be provided" }
 );
 
+export const ticketProgressSchema = z.object({
+  status: z.enum(["IN_PROGRESS", "DONE"]),
+});
+export type TicketProgressInput = z.infer<typeof ticketProgressSchema>;
+
 export type TicketUpdateInput = z.infer<typeof ticketUpdateSchema>;
 
 export type TicketListQuery = z.infer<typeof ticketListQuerySchema>;
