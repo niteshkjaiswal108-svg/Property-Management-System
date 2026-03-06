@@ -16,5 +16,22 @@ export const ticketListQuerySchema = z.object({
   priority: z.enum(["LOW", "MEDIUM", "HIGH"]).optional(),
   propertyId: z.string().uuid().optional(),
 });
+// Add to ticket.validations.ts
+
+export const ticketAssignSchema = z.object({
+  technicianId: z.string().uuid("technicianId must be a valid UUID"),
+});
+
+export type TicketAssignInput = z.infer<typeof ticketAssignSchema>;
+
+export const ticketUpdateSchema = z.object({
+  priority: z.enum(["LOW", "MEDIUM", "HIGH"]).optional(),
+  status: z.enum(["OPEN", "ASSIGNED", "IN_PROGRESS", "DONE"]).optional(),
+}).refine(
+  (data) => Object.keys(data).length > 0,
+  { message: "At least one of priority or status must be provided" }
+);
+
+export type TicketUpdateInput = z.infer<typeof ticketUpdateSchema>;
 
 export type TicketListQuery = z.infer<typeof ticketListQuerySchema>;
