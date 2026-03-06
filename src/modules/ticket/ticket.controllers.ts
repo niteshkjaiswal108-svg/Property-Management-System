@@ -8,6 +8,7 @@ import {
 import {
   createTicketService,
   getAllTicketsService,
+  getAssignedTicketsService,
   getMyTicketsService,
   getTicketByIdService,
 } from "./ticket.services.ts";
@@ -190,6 +191,20 @@ export const updateTicketController = async (req: Request, res: Response) => {
     res.status(200).json({ ticket });
   } catch (error: any) {
     logger.error(`updateTicketController error: ${error.message || error}`);
+    res
+      .status(error.statusCode || 500)
+      .json({ message: error.message || "Internal Server Error" });
+  }
+};
+
+export const getAssignedTicketsController = async (req: Request, res: Response) => {
+  try {
+    const user = (req as any).user;
+    if (!user?.userId) throw new AppError("Unauthorized", 401);
+    const tickets = await getAssignedTicketsService(user.userId);
+    res.status(200).json({ tickets });
+  } catch (error: any) {
+    logger.error(`getAssignedTicketsController error: ${error.message || error}`);
     res
       .status(error.statusCode || 500)
       .json({ message: error.message || "Internal Server Error" });
