@@ -21,6 +21,7 @@ import {
   updateTicket,
   type ListTicketsFilters,
 } from './ticket.repositories.ts';
+import { createNotificationService } from '../notification/notification.services.ts';
 import { findPropertyById } from '../property/property.repositories.ts';
 import { findUserById } from '../user/user.repositories.ts';
 
@@ -85,6 +86,15 @@ export const createTicketService = async (
       oldValue: null,
       newValue: `Ticket created with status OPEN and priority ${priority}`,
     });
+
+    const property = await findPropertyById(data.propertyId);
+    if (property?.managerId && ticket?.id) {
+      await createNotificationService(
+        property.managerId,
+        `New ticket: ${data.title}`,
+        ticket.id,
+      );
+    }
 
     logger.info(`Ticket created id=${ticket?.id} by tenantId=${tenantId}`);
     return ticket;
@@ -223,6 +233,12 @@ export const assignTicketService = async (
     newValue: `Technician: ${technician.name}; Status: ASSIGNED`,
   });
 
+  await createNotificationService(
+    data.technicianId,
+    `You were assigned to ticket: ${ticket.title}`,
+    ticketId,
+  );
+
   logger.info(
     `Ticket ${ticketId} assigned to technician ${data.technicianId} by manager ${managerId}`,
   );
@@ -334,6 +350,15 @@ export const updateTicketProgressService = async (
     oldValue: ticket.status,
     newValue: data.status,
   });
+
+  if (data.status === 'DONE' && ticket.tenantId) {
+    await createNotificationService(
+      ticket.tenantId,
+      `Your ticket has been completed: ${ticket.title}`,
+      ticketId,
+    );
+  }
+
   logger.info(
     `Ticket ${ticketId} progress updated to ${data.status} by technician ${technicianId}`,
   );
