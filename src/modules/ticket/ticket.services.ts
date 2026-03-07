@@ -90,15 +90,28 @@ export const createTicketService = async (
 
     const property = await findPropertyById(data.propertyId);
     if (property?.managerId && ticket?.id) {
-      await createNotificationService(
-        property.managerId,
-        `New ticket: ${data.title}`,
-        ticket.id,
-      );
+      try {
+        await createNotificationService(
+          property.managerId,
+          `New ticket: ${data.title}`,
+          ticket.id,
+        );
+      } catch (error: unknown) {
+        const errorMessage =
+          error instanceof Error ? error.message : String(error);
+        logger.error(
+          `Failed to create notification for managerId=${property.managerId} ticketId=${ticket.id}: ${errorMessage}`,
+        );
+      }
+    }
+    if (!ticket?.id) {
+      throw new AppError('Failed to create ticket', 500);
     }
 
-    logger.info(`Ticket created id=${ticket?.id} by tenantId=${tenantId}`);
-    return ticket;
+    const images = await findTicketImagesByTicketId(ticket.id);
+
+    logger.info(`Ticket created id=${ticket.id} by tenantId=${tenantId}`);
+    return { ...ticket, images };
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : String(error);
     logger.error(`createTicketService error: ${message}`);
@@ -266,11 +279,18 @@ export const assignTicketService = async (
     newValue: `Technician: ${technician.name}; Status: ASSIGNED`,
   });
 
-  await createNotificationService(
-    data.technicianId,
-    `You were assigned to ticket: ${ticket.title}`,
-    ticketId,
-  );
+  try {
+    await createNotificationService(
+      data.technicianId,
+      `You were assigned to ticket: ${ticket.title}`,
+      ticketId,
+    );
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    logger.error(
+      `Failed to create notification for technicianId=${data.technicianId} ticketId=${ticketId}: ${errorMessage}`,
+    );
+  }
 
   logger.info(
     `Ticket ${ticketId} assigned to technician ${data.technicianId} by user ${userId}`,
@@ -396,11 +416,19 @@ export const updateTicketProgressService = async (
   });
 
   if (data.status === 'DONE' && ticket.tenantId) {
-    await createNotificationService(
-      ticket.tenantId,
-      `Your ticket has been completed: ${ticket.title}`,
-      ticketId,
-    );
+    try {
+      await createNotificationService(
+        ticket.tenantId,
+        `Your ticket has been completed: ${ticket.title}`,
+        ticketId,
+      );
+    } catch (error: unknown) {
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+      logger.error(
+        `Failed to create notification for tenantId=${ticket.tenantId} ticketId=${ticketId}: ${errorMessage}`,
+      );
+    }
   }
 
   logger.info(

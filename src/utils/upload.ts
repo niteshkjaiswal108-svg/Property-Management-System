@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import type { Request } from 'express';
 import multer from 'multer';
 
 const uploadDir = path.join(process.cwd(), 'uploads');
@@ -31,4 +32,8 @@ export const uploadTicketImages = multer({
   storage,
   fileFilter,
   limits: { fileSize: 5 * 1024 * 1024, files: 5 },
-}).array('images', 5);
+}).any() as (
+  req: Request,
+  res: any,
+  next: (err?: Error | null) => void,
+) => void;

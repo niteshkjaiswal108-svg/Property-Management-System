@@ -18,7 +18,14 @@ export const createNotificationService = async (
     ticketId,
   });
   if (notification) {
-    logger.info(`Created notification for userId=${userId} ticketId=${ticketId}`);
+    logger.info(
+      `Created notification for userId=${userId} ticketId=${ticketId}`,
+    );
+  }
+  else {
+    logger.warn(
+      `Failed to create notification for userId=${userId} ticketId=${ticketId}`,
+    );
   }
   return notification;
 };
