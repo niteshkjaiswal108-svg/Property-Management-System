@@ -1,10 +1,27 @@
 import { AppError } from '#utils/error.ts';
 import logger from '#utils/logger.ts';
 import {
+  createNotification as createNotificationRepo,
   findNotificationsByUserId,
   findNotificationById,
   markNotificationAsRead,
 } from './notification.repositories.ts';
+
+export const createNotificationService = async (
+  userId: string,
+  message: string,
+  ticketId: string,
+) => {
+  const notification = await createNotificationRepo({
+    userId,
+    message,
+    ticketId,
+  });
+  if (notification) {
+    logger.info(`Created notification for userId=${userId} ticketId=${ticketId}`);
+  }
+  return notification;
+};
 
 // "Get my notifications" – just load them for this user
 export const getMyNotificationsService = async (userId: string) => {

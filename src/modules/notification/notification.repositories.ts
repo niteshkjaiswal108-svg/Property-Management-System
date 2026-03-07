@@ -1,6 +1,25 @@
 import { eq, and, desc } from 'drizzle-orm';
 import { db } from '#db/db.ts';
 import { notifications } from './notification.models.ts';
+
+type CreateNotificationInput = {
+  userId: string;
+  message: string;
+  ticketId: string;
+};
+
+export const createNotification = async (data: CreateNotificationInput) => {
+  const [row] = await db
+    .insert(notifications)
+    .values({
+      userId: data.userId,
+      message: data.message,
+      ticketId: data.ticketId,
+    })
+    .returning();
+  return row ?? null;
+};
+
 // "Find all notifications for this user" – like asking the DB for a list
 export const findNotificationsByUserId = async (userId: string) => {
   const rows = await db
