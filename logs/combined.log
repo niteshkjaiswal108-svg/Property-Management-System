@@ -658,3 +658,141 @@
 {"level":"info","message":"Fetched 0 notifications for userId=4f0e0ac9-0503-410f-a926-a1397667d6b7","service":"property-maintenance-api","timestamp":"2026-03-07T08:51:43.820Z"}
 {"level":"info","message":"::1 - - [07/Mar/2026:08:51:43 +0000] \"GET /api/v1/notifications HTTP/1.1\" 200 20 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T08:51:43.821Z"}
 {"level":"info","message":"Shutting down gracefully...","service":"property-maintenance-api","timestamp":"2026-03-07T08:54:43.617Z"}
+{"level":"info","message":"Logger initialized with level: debug","service":"property-maintenance-api","timestamp":"2026-03-07T09:00:08.660Z"}
+{"level":"info","message":"API server is running on http://localhost:8000","service":"property-maintenance-api","timestamp":"2026-03-07T09:00:11.178Z"}
+{"level":"info","message":"Token verified successfully for userId: 4f0e0ac9-0503-410f-a926-a1397667d6b7","service":"property-maintenance-api","timestamp":"2026-03-07T09:00:13.713Z"}
+{"level":"info","message":"Fetched 0 notifications for userId=4f0e0ac9-0503-410f-a926-a1397667d6b7","service":"property-maintenance-api","timestamp":"2026-03-07T09:00:14.169Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:00:14 +0000] \"GET /api/v1/notifications HTTP/1.1\" 200 20 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:00:14.175Z"}
+{"level":"info","message":"Token verified successfully for userId: 4f0e0ac9-0503-410f-a926-a1397667d6b7","service":"property-maintenance-api","timestamp":"2026-03-07T09:01:30.673Z"}
+{"level":"info","message":"Fetched 0 notifications for userId=4f0e0ac9-0503-410f-a926-a1397667d6b7","service":"property-maintenance-api","timestamp":"2026-03-07T09:01:31.169Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:01:31 +0000] \"GET /api/v1/notifications HTTP/1.1\" 200 20 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:01:31.171Z"}
+{"level":"info","message":"Logger initialized with level: debug","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:36.481Z"}
+{"level":"info","message":"API server is running on http://localhost:8000","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:40.498Z"}
+{"level":"info","message":"Register request for email: admin2propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:45.580Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"admin2propro@31.com\",\"password\":\"password123\",\"phone\":\"7876543275\",\"role\":\"TENANT\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:45.582Z"}
+{"level":"warn","message":"Registration failed - Email already in use: admin2propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:45.868Z"}
+{"level":"error","message":"Register failed: Email already in use","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:45.870Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:46:45 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 400 34 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:45.888Z"}
+{"level":"info","message":"Register request for email: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:59.777Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"tenant3propro@31.com\",\"password\":\"password123\",\"phone\":\"7876543275\",\"role\":\"TENANT\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:46:59.779Z"}
+{"level":"warn","message":"Registration failed - Phone already in use: 7876543275","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:00.018Z"}
+{"level":"error","message":"Register failed: Phone number already in use","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:00.019Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:47:00 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:00.023Z"}
+{"level":"info","message":"Register request for email: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:06.269Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"tenant3propro@31.com\",\"password\":\"password123\",\"phone\":\"6876543275\",\"role\":\"TENANT\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:06.270Z"}
+{"level":"info","message":"User registered successfully: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:07.486Z"}
+{"level":"info","message":"User registered successfully: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:07.492Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:47:07 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 42 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:07.495Z"}
+{"level":"info","message":"Login attempt for email: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:24.060Z"}
+{"level":"info","message":"Login attempt for email: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:24.062Z"}
+{"level":"info","message":"User logged in successfully: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:25.198Z"}
+{"level":"info","message":"User logged in successfully: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:25.199Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:47:25 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:25.201Z"}
+{"level":"info","message":"Token verified successfully for userId: 5244ebf0-5f21-4015-b0c4-32e0c03a8f6c","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:40.231Z"}
+{"level":"info","message":"CreateTicket request by userId=5244ebf0-5f21-4015-b0c4-32e0c03a8f6c","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:40.251Z"}
+{"level":"info","message":"Created notification for userId=4f0e0ac9-0503-410f-a926-a1397667d6b7 ticketId=b9b63dd2-6714-44ab-b634-ac407fad330e","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:41.806Z"}
+{"level":"info","message":"Ticket created id=b9b63dd2-6714-44ab-b634-ac407fad330e by tenantId=5244ebf0-5f21-4015-b0c4-32e0c03a8f6c","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:41.807Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:47:41 +0000] \"POST /api/v1/tickets HTTP/1.1\" 201 354 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:41.813Z"}
+{"level":"info","message":"Token verified successfully for userId: 5244ebf0-5f21-4015-b0c4-32e0c03a8f6c","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:53.518Z"}
+{"level":"info","message":"Fetched 0 notifications for userId=5244ebf0-5f21-4015-b0c4-32e0c03a8f6c","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:53.790Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:47:53 +0000] \"GET /api/v1/notifications HTTP/1.1\" 200 20 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:47:53.794Z"}
+{"level":"info","message":"Register request for email: admin3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:30.156Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"admin3propro@31.com\",\"password\":\"password123\",\"phone\":\"6876543275\",\"role\":\"ADMIN\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:30.157Z"}
+{"level":"warn","message":"Registration failed - Phone already in use: 6876543275","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:30.475Z"}
+{"level":"error","message":"Register failed: Phone number already in use","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:30.477Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:48:30 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:30.479Z"}
+{"level":"info","message":"Register request for email: admin3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:36.823Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"admin3propro@31.com\",\"password\":\"password123\",\"phone\":\"6876543205\",\"role\":\"ADMIN\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:36.824Z"}
+{"level":"info","message":"User registered successfully: admin3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:38.137Z"}
+{"level":"info","message":"User registered successfully: admin3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:38.139Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:48:38 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 42 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:38.143Z"}
+{"level":"info","message":"Token verified successfully for userId: 4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:50.736Z"}
+{"level":"info","message":"getPropertiesController for userId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:50.737Z"}
+{"level":"info","message":"getPropertiesForManagerService for managerId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:50.738Z"}
+{"level":"info","message":"Fetched 0 properties for managerId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:51.045Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:48:51 +0000] \"GET /api/v1/properties HTTP/1.1\" 200 17 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:48:51.049Z"}
+{"level":"info","message":"Token verified successfully for userId: 4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:14.666Z"}
+{"level":"info","message":"createPropertyController by userId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302 name=Sunrise Apartments","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:14.669Z"}
+{"level":"info","message":"createPropertyService called by managerId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302 name=Sunrise Apartments","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:14.670Z"}
+{"level":"info","message":"Property created id=74ec931d-8ddd-4d4a-8798-328e90fa1952 by managerId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:14.909Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:49:14 +0000] \"POST /api/v1/properties HTTP/1.1\" 201 206 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:14.912Z"}
+{"level":"info","message":"Token verified successfully for userId: 4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:22.380Z"}
+{"level":"info","message":"getPropertiesController for userId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:22.382Z"}
+{"level":"info","message":"getPropertiesForManagerService for managerId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:22.383Z"}
+{"level":"info","message":"Fetched 1 properties for managerId=4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:22.773Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:49:22 +0000] \"GET /api/v1/properties HTTP/1.1\" 200 210 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:49:22.775Z"}
+{"level":"info","message":"Token verified successfully for userId: 4d864325-f5b2-4f3e-a3f3-8b0e31d4b302","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:08.292Z"}
+{"level":"warn","message":"Forbidden access attempt by userId: 4d864325-f5b2-4f3e-a3f3-8b0e31d4b302 with role: ADMIN to /api/v1/users/users","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:08.293Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:50:08 +0000] \"GET /api/v1/users/users HTTP/1.1\" 403 23 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:08.294Z"}
+{"level":"info","message":"Register request for email: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:34.991Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"manager3propro@31.com\",\"password\":\"password123\",\"phone\":\"6876443205\",\"role\":\"ADMIN\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:34.992Z"}
+{"level":"info","message":"User registered successfully: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:36.204Z"}
+{"level":"info","message":"User registered successfully: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:36.207Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:50:36 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 42 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:36.211Z"}
+{"level":"info","message":"Token verified successfully for userId: b0a08a36-e90a-492c-8fba-881c06334353","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:43.088Z"}
+{"level":"warn","message":"Forbidden access attempt by userId: b0a08a36-e90a-492c-8fba-881c06334353 with role: ADMIN to /api/v1/users/users","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:43.088Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:50:43 +0000] \"GET /api/v1/users/users HTTP/1.1\" 403 23 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:43.089Z"}
+{"level":"info","message":"Login attempt for email: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:54.091Z"}
+{"level":"info","message":"Login attempt for email: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:54.092Z"}
+{"level":"info","message":"User logged in successfully: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:54.950Z"}
+{"level":"info","message":"User logged in successfully: tenant3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:54.952Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:50:54 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:50:54.953Z"}
+{"level":"info","message":"Login attempt for email: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:03.105Z"}
+{"level":"info","message":"Login attempt for email: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:03.105Z"}
+{"level":"info","message":"User logged in successfully: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:04.121Z"}
+{"level":"info","message":"User logged in successfully: manager3propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:04.122Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:51:04 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:04.124Z"}
+{"level":"info","message":"Token verified successfully for userId: b0a08a36-e90a-492c-8fba-881c06334353","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:10.750Z"}
+{"level":"warn","message":"Forbidden access attempt by userId: b0a08a36-e90a-492c-8fba-881c06334353 with role: ADMIN to /api/v1/users/users","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:10.751Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:51:10 +0000] \"GET /api/v1/users/users HTTP/1.1\" 403 23 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:10.752Z"}
+{"level":"info","message":"Token verified successfully for userId: b0a08a36-e90a-492c-8fba-881c06334353","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:38.954Z"}
+{"level":"warn","message":"Forbidden access attempt by userId: b0a08a36-e90a-492c-8fba-881c06334353 with role: ADMIN to /api/v1/tickets?status=OPEN&priority=MEDIUM","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:38.955Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:51:38 +0000] \"GET /api/v1/tickets?status=OPEN&priority=MEDIUM HTTP/1.1\" 403 23 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:38.959Z"}
+{"level":"info","message":"Register request for email: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:54.714Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"manager4propro@31.com\",\"password\":\"password123\",\"phone\":\"6876443205\",\"role\":\"MANAGER\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:54.715Z"}
+{"level":"warn","message":"Registration failed - Phone already in use: 6876443205","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:54.960Z"}
+{"level":"error","message":"Register failed: Phone number already in use","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:54.962Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:51:54 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:51:54.964Z"}
+{"level":"info","message":"Register request for email: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:00.749Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"manager4propro@31.com\",\"password\":\"password123\",\"phone\":\"6276443205\",\"role\":\"MANAGER\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:00.751Z"}
+{"level":"info","message":"User registered successfully: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:02.123Z"}
+{"level":"info","message":"User registered successfully: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:02.124Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:52:02 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 42 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:02.126Z"}
+{"level":"info","message":"Token verified successfully for userId: 4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:13.328Z"}
+{"level":"info","message":"Listing users","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:13.330Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:52:13 +0000] \"GET /api/v1/users/users HTTP/1.1\" 200 3247 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:13.890Z"}
+{"level":"info","message":"Register request for email: admin5propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:36.979Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"admin5propro@31.com\",\"password\":\"password123\",\"phone\":\"6276443205\",\"role\":\"ADMIN\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:36.980Z"}
+{"level":"warn","message":"Registration failed - Phone already in use: 6276443205","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:37.241Z"}
+{"level":"error","message":"Register failed: Phone number already in use","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:37.242Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:52:37 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:37.243Z"}
+{"level":"info","message":"Register request for email: admin5propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:43.894Z"}
+{"level":"info","message":"Register attempt with data: {\"name\":\"John Doe\",\"email\":\"admin5propro@31.com\",\"password\":\"password123\",\"phone\":\"6266443205\",\"role\":\"ADMIN\"}","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:43.895Z"}
+{"level":"info","message":"User registered successfully: admin5propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:45.292Z"}
+{"level":"info","message":"User registered successfully: admin5propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:45.293Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:52:45 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 42 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:52:45.294Z"}
+{"level":"info","message":"Token verified successfully for userId: 6586791e-872d-44c0-8535-9fe6d8ef49f7","service":"property-maintenance-api","timestamp":"2026-03-07T09:53:33.344Z"}
+{"level":"info","message":"Property 74ec931d-8ddd-4d4a-8798-328e90fa1952 assigned to manager 6b53bf04-a58c-41c5-b8a0-622ed805e69e","service":"property-maintenance-api","timestamp":"2026-03-07T09:53:34.276Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:53:34 +0000] \"POST /api/v1/properties/74ec931d-8ddd-4d4a-8798-328e90fa1952/assign-manager HTTP/1.1\" 200 206 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:53:34.277Z"}
+{"level":"info","message":"Token verified successfully for userId: 6586791e-872d-44c0-8535-9fe6d8ef49f7","service":"property-maintenance-api","timestamp":"2026-03-07T09:54:48.124Z"}
+{"level":"info","message":"Property 74ec931d-8ddd-4d4a-8798-328e90fa1952 assigned to manager 4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:54:49.040Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:54:49 +0000] \"POST /api/v1/properties/74ec931d-8ddd-4d4a-8798-328e90fa1952/assign-manager HTTP/1.1\" 200 206 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:54:49.042Z"}
+{"level":"info","message":"Login attempt for email: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:06.331Z"}
+{"level":"info","message":"Login attempt for email: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:06.332Z"}
+{"level":"info","message":"User logged in successfully: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:07.538Z"}
+{"level":"info","message":"User logged in successfully: manager4propro@31.com","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:07.539Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:55:07 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:07.541Z"}
+{"level":"info","message":"Token verified successfully for userId: 4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:15.432Z"}
+{"level":"info","message":"Fetched 0 notifications for userId=4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:15.755Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:55:15 +0000] \"GET /api/v1/notifications HTTP/1.1\" 200 20 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:15.758Z"}
+{"level":"info","message":"Token verified successfully for userId: 4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:52.190Z"}
+{"level":"info","message":"getAllTickets request by managerId=4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:52.192Z"}
+{"filters":{"priority":"MEDIUM","status":"OPEN"},"level":"info","message":"Fetched 0 tickets for managerId=4754ca47-00f0-4876-bd7f-fa3203a60059 with filters","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:52.548Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:55:52 +0000] \"GET /api/v1/tickets?status=OPEN&priority=MEDIUM HTTP/1.1\" 200 14 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:55:52.551Z"}
+{"level":"info","message":"Token verified successfully for userId: 4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:56:24.265Z"}
+{"level":"info","message":"getAllTickets request by managerId=4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:56:24.266Z"}
+{"filters":{"priority":"MEDIUM","status":"OPEN"},"level":"info","message":"Fetched 0 tickets for managerId=4754ca47-00f0-4876-bd7f-fa3203a60059 with filters","service":"property-maintenance-api","timestamp":"2026-03-07T09:56:26.000Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:56:26 +0000] \"GET /api/v1/tickets?status=OPEN&priority=MEDIUM HTTP/1.1\" 200 14 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:56:26.003Z"}
+{"level":"info","message":"Token verified successfully for userId: 4754ca47-00f0-4876-bd7f-fa3203a60059","service":"property-maintenance-api","timestamp":"2026-03-07T09:57:39.394Z"}
+{"level":"error","message":"assignTicketController error: You do not have access to this ticket","service":"property-maintenance-api","timestamp":"2026-03-07T09:57:40.346Z"}
+{"level":"info","message":"::1 - - [07/Mar/2026:09:57:40 +0000] \"PATCH /api/v1/tickets/b9b63dd2-6714-44ab-b634-ac407fad330e/assign HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.52.0\"","service":"property-maintenance-api","timestamp":"2026-03-07T09:57:40.349Z"}
