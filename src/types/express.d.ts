@@ -1,4 +1,4 @@
-import type { TokenPayload } from '#modules/user/user.types.ts';
+import type { TokenPayload } from '#modules/user/user.types';
 
 declare global {
   namespace Express {

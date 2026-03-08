@@ -1,17 +1,17 @@
-import { successResponse } from '#utils/apiResponse.ts';
-import asyncHandler from '#utils/asyncHandler.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import { formatZodError } from '#utils/zod.ts';
+import { successResponse } from '#utils/apiResponse';
+import asyncHandler from '#utils/asyncHandler';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import { formatZodError } from '#utils/zod';
 import {
   ticketCreateSchema,
   ticketListQuerySchema,
   ticketProgressSchema,
   ticketAssignSchema,
   ticketUpdateSchema,
-} from '#validations/ticket.validations.ts';
+} from '#validations/ticket.validations';
 
-import type { ListTicketsFilters } from './ticket.repositories.ts';
+import type { ListTicketsFilters } from './ticket.repositories';
 
 import {
   createTicketService,
@@ -22,7 +22,7 @@ import {
   updateTicketProgressService,
   assignTicketService,
   updateTicketService,
-} from './ticket.services.ts';
+} from './ticket.services';
 
 export const createTicketController = asyncHandler(async (req, res) => {
   const user = req.user;

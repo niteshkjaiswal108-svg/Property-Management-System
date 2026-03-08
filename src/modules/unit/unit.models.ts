@@ -1,6 +1,6 @@
 import { pgTable, uuid, text, integer } from 'drizzle-orm/pg-core';
-import { properties } from '../property/property.models.ts';
-import { users } from '../user/user.models.ts';
+import { properties } from '../property/property.models';
+import { users } from '../user/user.models';
 
 export const units = pgTable('units', {
   id: uuid('id').defaultRandom().primaryKey(),

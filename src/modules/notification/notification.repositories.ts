@@ -1,6 +1,6 @@
 import { eq, and, desc } from 'drizzle-orm';
-import { db } from '#db/db.ts';
-import { notifications } from './notification.models.ts';
+import { db } from '#db/db';
+import { notifications } from './notification.models';
 
 type CreateNotificationInput = {
   userId: string;

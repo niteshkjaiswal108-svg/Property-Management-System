@@ -1,6 +1,6 @@
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import type { PropertyCreateInput } from '#validations/property.validations.ts';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import type { PropertyCreateInput } from '#validations/property.validations';
 import {
   createProperty,
   findPropertiesByManagerId,
@@ -9,8 +9,8 @@ import {
   findPropertyByNameAndOwner,
   findUnitsByPropertyId,
   updatePropertyManager,
-} from './property.repositories.ts';
-import { findUserById } from '../user/user.repositories.ts';
+} from './property.repositories';
+import { findUserById } from '../user/user.repositories';
 
 export const createPropertyService = async (
   ownerId: string,

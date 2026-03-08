@@ -8,8 +8,8 @@ import {
   refreshToken,
   registerUser,
   updateUserById,
-} from './user.controllers.ts';
-import { authorizeRoles, isAuthenticated } from './user.middlewares.ts';
+} from './user.controllers';
+import { authorizeRoles, isAuthenticated } from './user.middlewares';
 
 const userRouter: Router = Router();
 

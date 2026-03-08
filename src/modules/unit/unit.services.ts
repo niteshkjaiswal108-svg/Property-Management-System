@@ -1,11 +1,11 @@
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import type { CreateUnitInput } from '#validations/unit.validations.ts';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import type { CreateUnitInput } from '#validations/unit.validations';
 import {
   createUnit,
   findUnitByPropertyAndNumber,
-} from './unit.repositories.ts';
-import { findPropertyById } from '../property/property.repositories.ts';
+} from './unit.repositories';
+import { findPropertyById } from '../property/property.repositories';
 
 export const createUnitService = async (
   propertyId: string,

@@ -1,4 +1,4 @@
-import { roleEnum, userRoles, type UserRole } from './user.models.ts';
+import { roleEnum, userRoles, type UserRole } from './user.models';
 
 export { roleEnum, userRoles };
 export type { UserRole };

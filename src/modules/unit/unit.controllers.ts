@@ -1,10 +1,10 @@
-import { successResponse } from '#utils/apiResponse.ts';
-import asyncHandler from '#utils/asyncHandler.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import { formatZodError } from '#utils/zod.ts';
-import { createUnitSchema } from '#validations/unit.validations.ts';
-import { createUnitService } from './unit.services.ts';
+import { successResponse } from '#utils/apiResponse';
+import asyncHandler from '#utils/asyncHandler';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import { formatZodError } from '#utils/zod';
+import { createUnitSchema } from '#validations/unit.validations';
+import { createUnitService } from './unit.services';
 
 export const createUnitController = asyncHandler(async (req, res) => {
   const user = req.user;

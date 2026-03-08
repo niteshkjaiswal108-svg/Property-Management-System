@@ -1,11 +1,11 @@
 import type { Request, Response } from 'express';
-import { config } from '#config/env.ts';
-import { successResponse } from '#utils/apiResponse.ts';
-import asyncHandler from '#utils/asyncHandler.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import * as userService from './user.services.ts';
-import { ALLOWED_USER_ROLES, type UserRole } from './user.types.ts';
+import { config } from '#config/env';
+import { successResponse } from '#utils/apiResponse';
+import asyncHandler from '#utils/asyncHandler';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import * as userService from './user.services';
+import { ALLOWED_USER_ROLES, type UserRole } from './user.types';
 
 const COOKIE_OPTIONS = {
   httpOnly: true,

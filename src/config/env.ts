@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import type { StringValue } from 'ms';
-import { AppError } from '../utils/error.ts';
+import { AppError } from '#utils/error';
 
 const requiredEnvVars = [
   'ACCESS_SECRET',

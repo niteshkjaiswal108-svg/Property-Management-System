@@ -2,8 +2,8 @@ import { Router } from 'express';
 import {
   getMyNotificationsController,
   markNotificationAsReadController,
-} from './notification.controllers.ts';
-import { isAuthenticated } from '../user/user.middlewares.ts';
+} from './notification.controllers';
+import { isAuthenticated } from '../user/user.middlewares';
 
 const notificationRouter: Router = Router();
 

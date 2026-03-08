@@ -1,5 +1,5 @@
 import { pgTable, uuid, text, timestamp, unique } from 'drizzle-orm/pg-core';
-import { users } from '../user/user.models.ts';
+import { users } from '../user/user.models';
 
 export const properties = pgTable(
   'properties',

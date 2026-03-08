@@ -1,10 +1,10 @@
-import { successResponse } from '#utils/apiResponse.ts';
-import asyncHandler from '#utils/asyncHandler.ts';
-import { AppError } from '#utils/error.ts';
+import { successResponse } from '#utils/apiResponse';
+import asyncHandler from '#utils/asyncHandler';
+import { AppError } from '#utils/error';
 import {
   getMyNotificationsService,
   markAsReadService,
-} from './notification.services.ts';
+} from './notification.services';
 
 export const getMyNotificationsController = asyncHandler(async (req, res) => {
   const user = req.user;

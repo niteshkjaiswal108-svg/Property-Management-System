@@ -1,12 +1,12 @@
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import { findPropertyById } from '../property/property.repositories.ts';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import { findPropertyById } from '../property/property.repositories';
 import {
   findActivityLogsByTicketId,
   findTicketById,
   findUnitById,
-} from '../ticket/ticket.repositories.ts';
-import type { TokenPayload } from '../user/user.types.ts';
+} from '../ticket/ticket.repositories';
+import type { TokenPayload } from '../user/user.types';
 
 export const getTicketActivityService = async (
   ticketId: string,

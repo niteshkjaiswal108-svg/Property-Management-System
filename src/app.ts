@@ -1,23 +1,24 @@
+
 import cookieParser from 'cookie-parser';
 import express, {
+  type Express,
+  type NextFunction,
   type Request,
   type Response,
-  type NextFunction,
-  type Express,
 } from 'express';
 import morgan from 'morgan';
-import { config } from '#config/env.ts';
-import activityRouter from '#modules/activity/activity.routes.ts';
-import notificationRouter from '#modules/notification/notification.routes.ts';
-import propertyRouter from '#modules/property/property.routes.ts';
-import ticketRouter from '#modules/ticket/ticket.routes.ts';
-import userRouter from '#modules/user/user.routes.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import { rateLimiterMiddleware } from '#utils/rateLimiter.ts';
+import { config } from '#config/env';
+import activityRouter from '#modules/activity/activity.routes';
+
+import notificationRouter from '#modules/notification/notification.routes';
+import propertyRouter from '#modules/property/property.routes';
+import ticketRouter from '#modules/ticket/ticket.routes';
+import userRouter from '#modules/user/user.routes';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import { rateLimiterMiddleware } from '#utils/rateLimiter';
 
 const app: Express = express();
-app.use(rateLimiterMiddleware);
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -28,9 +29,14 @@ app.use(
   }),
 );
 
+const instanceId = process.env.INSTANCE_ID ?? process.env.HOSTNAME ?? 'local';
+
 app.get('/', (req, res) => {
   logger.info('Hello from Property Maintenance API!');
-  res.status(200).json('Hello from Property Maintenance API!');
+  res.status(200).json({
+    message: 'Hello from Property Maintenance API!',
+    instance: instanceId,
+  });
 });
 
 app.get('/health', (req, res) => {
@@ -39,13 +45,18 @@ app.get('/health', (req, res) => {
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     message: 'Server is healthy',
+    instance: instanceId,
   });
 });
 
 app.get('/api', (req, res) => {
-  res.status(200).json({ message: 'Property Maintenance API is running!!' });
+  res.status(200).json({
+    message: 'Property Maintenance API is running!!',
+    instance: instanceId,
+  });
 });
 
+app.use('/api/v1', rateLimiterMiddleware);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/notifications', notificationRouter);
 app.use('/api/v1/activity', activityRouter);

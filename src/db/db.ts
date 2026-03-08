@@ -1,6 +1,6 @@
 import { drizzle } from 'drizzle-orm/node-postgres';
 import pg from 'pg';
-import { config } from '#config/env.ts';
+import { config } from '#config/env';
 
 export const pool = new pg.Pool({
   connectionString: config.databaseUrl,

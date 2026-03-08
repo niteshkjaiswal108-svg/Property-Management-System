@@ -1,18 +1,18 @@
 import jwt from 'jsonwebtoken';
-import { config } from '#config/env.ts';
-import { hashPassword, VerifyPassword } from '#utils/argon.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import { formatZodError } from '#utils/zod.ts';
-import { userSchema, updateUserSchema } from '#validations/user.validations.ts';
+import { config } from '#config/env';
+import { hashPassword, VerifyPassword } from '#utils/argon';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import { formatZodError } from '#utils/zod';
+import { userSchema, updateUserSchema } from '#validations/user.validations';
 import {
   findExistingUser,
   findUserById,
   listUsers,
   registerUser,
   updateUserById,
-} from './user.repositories.ts';
-import type { PublicUser, TokenPayload, UserRole } from './user.types.ts';
+} from './user.repositories';
+import type { PublicUser, TokenPayload, UserRole } from './user.types';
 
 export const createUser = async (data: unknown) => {
   logger.info(

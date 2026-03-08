@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { v2 as cloudinary } from 'cloudinary';
-import { config } from '#config/env.ts';
+import { config } from '#config/env';
 
 if (config.cloudinary) {
   cloudinary.config({

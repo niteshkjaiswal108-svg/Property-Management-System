@@ -4,9 +4,9 @@ import {
   getPropertiesController,
   getPropertyByIdController,
   assignManagerController,
-} from './property.controllers.ts';
-import { createUnitController } from '../unit/unit.controllers.ts';
-import { isAuthenticated, authorizeRoles } from '../user/user.middlewares.ts';
+} from './property.controllers';
+import { createUnitController } from '../unit/unit.controllers';
+import { isAuthenticated, authorizeRoles } from '../user/user.middlewares';
 
 const propertyRouter: Router = Router();
 

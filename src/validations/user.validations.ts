@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ALLOWED_USER_ROLES, type UserRole } from '#modules/user/user.types.ts';
+import { ALLOWED_USER_ROLES, type UserRole } from '#modules/user/user.types';
 
 export const userSchema = z.object({
   name: z.string({ message: 'Name is required' }).min(1, 'Name is required'),

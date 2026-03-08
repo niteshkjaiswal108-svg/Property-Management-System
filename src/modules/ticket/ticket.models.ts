@@ -1,6 +1,6 @@
 import { pgTable, uuid, text, timestamp, pgEnum } from 'drizzle-orm/pg-core';
-import { units } from '../unit/unit.models.ts';
-import { users } from '../user/user.models.ts';
+import { units } from '../unit/unit.models';
+import { users } from '../user/user.models';
 
 export const ticketStatuses = [
   'OPEN',

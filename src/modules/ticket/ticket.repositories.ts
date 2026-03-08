@@ -1,12 +1,12 @@
 import { desc, eq, and } from 'drizzle-orm';
-import { db } from '#db/db.ts';
-import { ticketImages, tickets } from './ticket.models.ts';
+import { db } from '#db/db';
+import { ticketImages, tickets } from './ticket.models';
 import {
   activityLogs,
   type actionTypeEnum,
-} from '../activity/activity.models.ts';
-import { properties } from '../property/property.models.ts';
-import { units } from '../unit/unit.models.ts';
+} from '../activity/activity.models';
+import { properties } from '../property/property.models';
+import { units } from '../unit/unit.models';
 
 type CreateTicketRepoInput = {
   title: string;

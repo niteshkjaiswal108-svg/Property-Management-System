@@ -1,7 +1,7 @@
-import { successResponse } from '#utils/apiResponse.ts';
-import asyncHandler from '#utils/asyncHandler.ts';
-import { AppError } from '#utils/error.ts';
-import { getTicketActivityService } from './activity.services.ts';
+import { successResponse } from '#utils/apiResponse';
+import asyncHandler from '#utils/asyncHandler';
+import { AppError } from '#utils/error';
+import { getTicketActivityService } from './activity.services';
 
 export const getTicketActivityController = asyncHandler(async (req, res) => {
   const user = req.user;

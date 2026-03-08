@@ -1,11 +1,11 @@
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
 import {
   createNotification as createNotificationRepo,
   findNotificationsByUserId,
   findNotificationById,
   markNotificationAsRead,
-} from './notification.repositories.ts';
+} from './notification.repositories';
 
 export const createNotificationService = async (
   userId: string,

@@ -1,8 +1,8 @@
 import { eq, or } from 'drizzle-orm';
-import { db } from '#db/db.ts';
-import { AppError } from '#utils/error.ts';
-import { users } from './user.models.ts';
-import type { PublicUser, UserRole } from './user.types.ts';
+import { db } from '#db/db';
+import { AppError } from '#utils/error';
+import { users } from './user.models';
+import type { PublicUser, UserRole } from './user.types';
 
 type UserData = {
   name: string;

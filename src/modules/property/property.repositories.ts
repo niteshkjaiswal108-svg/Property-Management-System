@@ -1,7 +1,7 @@
 import { eq, and } from 'drizzle-orm';
-import { db } from '#db/db.ts';
-import { properties } from './property.models.ts';
-import { units } from '../unit/unit.models.ts';
+import { db } from '#db/db';
+import { properties } from './property.models';
+import { units } from '../unit/unit.models';
 
 type CreatePropertyRepoInput = {
   name: string;

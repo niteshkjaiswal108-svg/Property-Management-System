@@ -1,6 +1,6 @@
 import { and, eq } from 'drizzle-orm';
-import { db } from '#db/db.ts';
-import { units } from './unit.models.ts';
+import { db } from '#db/db';
+import { units } from './unit.models';
 type CreateUnitRepoInput = {
   propertyId: string;
   unitNumber: string;

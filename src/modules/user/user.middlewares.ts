@@ -1,8 +1,8 @@
 import type { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { config } from '#config/env.ts';
-import logger from '#utils/logger.ts';
-import type { TokenPayload } from './user.types.ts';
+import { config } from '#config/env';
+import logger from '#utils/logger';
+import type { TokenPayload } from './user.types';
 
 export const isAuthenticated = (
   req: Request,

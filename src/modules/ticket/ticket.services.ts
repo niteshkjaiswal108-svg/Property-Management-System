@@ -1,11 +1,11 @@
-import { uploadToCloudinary } from '#utils/cloudinary.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
+import { uploadToCloudinary } from '#utils/cloudinary';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
 import type {
   TicketAssignInput,
   TicketCreateInput,
   TicketUpdateInput,
-} from '#validations/ticket.validations.ts';
+} from '#validations/ticket.validations';
 import {
   createActivityLog,
   createTicket,
@@ -21,10 +21,10 @@ import {
   findUnitById,
   updateTicket,
   type ListTicketsFilters,
-} from './ticket.repositories.ts';
-import { createNotificationService } from '../notification/notification.services.ts';
-import { findPropertyById } from '../property/property.repositories.ts';
-import { findUserById } from '../user/user.repositories.ts';
+} from './ticket.repositories';
+import { createNotificationService } from '../notification/notification.services';
+import { findPropertyById } from '../property/property.repositories';
+import { findUserById } from '../user/user.repositories';
 
 export const createTicketService = async (
   userId: string,

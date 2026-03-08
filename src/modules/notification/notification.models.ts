@@ -1,6 +1,6 @@
 import { pgTable, uuid, text, timestamp, boolean } from 'drizzle-orm/pg-core';
-import { tickets } from '../ticket/ticket.models.ts';
-import { users } from '../user/user.models.ts';
+import { tickets } from '../ticket/ticket.models';
+import { users } from '../user/user.models';
 
 export const notifications = pgTable('notifications', {
   id: uuid('id').defaultRandom().primaryKey(),

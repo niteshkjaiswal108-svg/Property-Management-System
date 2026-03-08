@@ -1,18 +1,18 @@
-import { successResponse } from '#utils/apiResponse.ts';
-import asyncHandler from '#utils/asyncHandler.ts';
-import { AppError } from '#utils/error.ts';
-import logger from '#utils/logger.ts';
-import { formatZodError } from '#utils/zod.ts';
+import { successResponse } from '#utils/apiResponse';
+import asyncHandler from '#utils/asyncHandler';
+import { AppError } from '#utils/error';
+import logger from '#utils/logger';
+import { formatZodError } from '#utils/zod';
 import {
   assignManagerSchema,
   propertyCreateSchema,
-} from '#validations/property.validations.ts';
+} from '#validations/property.validations';
 import {
   assignManagerToPropertyService,
   createPropertyService,
   getPropertiesService,
   getPropertyByIdService,
-} from './property.services.ts';
+} from './property.services';
 
 export const createPropertyController = asyncHandler(async (req, res) => {
   const user = req.user;

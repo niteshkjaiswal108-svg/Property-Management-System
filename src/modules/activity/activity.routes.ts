@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { getTicketActivityController } from './activity.controllers.ts';
-import { isAuthenticated, authorizeRoles } from '../user/user.middlewares.ts';
+import { getTicketActivityController } from './activity.controllers';
+import { isAuthenticated, authorizeRoles } from '../user/user.middlewares';
 
 const activityRouter: Router = Router();
 

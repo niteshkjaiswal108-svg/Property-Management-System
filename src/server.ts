@@ -1,5 +1,5 @@
-import app from './app.ts';
-import logger from './utils/logger.ts';
+import logger from '#utils/logger';
+import app from './app';
 
 const PORT = Number(process.env.PORT) || 8000;
 
@@ -19,6 +19,15 @@ process.on('unhandledRejection', (reason: unknown) => {
 
 const server = app.listen(PORT, () => {
   logger.info(`API server is running on http://localhost:${PORT}`);
+});
+
+server.on('error', (error: NodeJS.ErrnoException) => {
+  if (error.code === 'EADDRINUSE') {
+    logger.error(`Port ${PORT} is already in use`);
+  } else {
+    logger.error(`Server error: ${error.message}`);
+  }
+  process.exit(1);
 });
 
 // Graceful shutdown

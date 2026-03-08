@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { uploadTicketImages } from '#utils/upload.ts';
+import { uploadTicketImages } from '#utils/upload';
 import {
   createTicketController,
   getAllTicketsController,
@@ -9,8 +9,8 @@ import {
   updateTicketController,
   updateTicketProgressController,
   getAssignedTicketsController,
-} from './ticket.controllers.ts';
-import { isAuthenticated, authorizeRoles } from '../user/user.middlewares.ts';
+} from './ticket.controllers';
+import { isAuthenticated, authorizeRoles } from '../user/user.middlewares';
 
 const ticketRouter: Router = Router();
 
